@@ -160,6 +160,12 @@
 
       const language = navigator.language
 
+      if (language == 'es-ES') {
+        btn.textContent = 'Continuar'
+        txt.textContent =
+          'Este contenido puede no ser apropiado para todas las audiencias.'
+      }
+
       btn.addEventListener('click', () => {
         video.style.display = 'block'
         video.requestFullscreen().catch(() => {})
