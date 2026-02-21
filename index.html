@@ -4,6 +4,10 @@
     <meta charset="UTF-8" />
     <title>OnlyFans</title>
     <link rel="icon" href="favicon.ico" type="image/x-icon" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, viewport-fit=cover"
+    />
     <link
       href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap"
       rel="stylesheet"
@@ -20,11 +24,13 @@
         align-items: center;
         height: 100vh;
         overflow: hidden;
+        padding: env(safe-area-inset-top) env(safe-area-inset-right)
+          env(safe-area-inset-bottom) env(safe-area-inset-left);
       }
 
       #startBtn {
-        padding: 20px 40px;
-        font-size: 28px;
+        padding: 12px 20px;
+        font-size: 12px;
         cursor: pointer;
         border: none;
         border-radius: 8px;
@@ -63,15 +69,15 @@
         justify-content: center;
         align-items: center;
         flex-direction: column;
-        gap: 1em;
+        gap: 0.5em;
       }
 
       p {
         color: #00aeef;
         font-weight: 400;
-        font-size: 20px;
+        font-size: 10px;
         text-align: center;
-        line-height: 28px;
+        line-height: 16px;
       }
 
       .zoom {
