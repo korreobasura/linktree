@@ -24,7 +24,7 @@
 
       #startBtn {
         padding: 20px 40px;
-        font-size: 20px;
+        font-size: 28px;
         cursor: pointer;
         border: none;
         border-radius: 8px;
@@ -50,12 +50,12 @@
       }
 
       #cont {
-        width: 70%;
+        width: 50%;
         display: flex;
         justify-content: center;
         align-items: center;
         flex-direction: column;
-        gap: 4em;
+        gap: 0.5em;
       }
 
       #cont2 {
@@ -65,9 +65,13 @@
         flex-direction: column;
         gap: 1em;
       }
+
       p {
         color: #00aeef;
         font-weight: 400;
+        font-size: 20px;
+        text-align: center;
+        line-height: 28px;
       }
 
       .zoom {
@@ -127,25 +131,7 @@
         />
       </svg>
       <div id="cont2">
-        <p style="display: inline-flex; align-items: center; gap: 6px">
-          <span>
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              viewBox="0 0 24 24"
-              width="20"
-              height="20"
-              style="display: inline-block; vertical-align: middle"
-            >
-              <path
-                fill="#00aeef"
-                d="M12,2L1,21H23M12,6L19.53,19H4.47M11,10V14H13V10M11,16V18H13V16"
-              />
-            </svg>
-          </span>
-          <span id="txt">
-            This content may not be appropriate for all audiences.
-          </span>
-        </p>
+        <p id="txt">This content may not be appropriate for all audiences.</p>
         <button id="startBtn">Continue</button>
       </div>
     </div>
@@ -158,13 +144,29 @@
       const cont = document.getElementById('cont')
       const video = document.getElementById('video')
 
+      const svg = `<span><svg
+              xmlns="http://www.w3.org/2000/svg"
+              viewBox="0 0 24 24"
+              width="20"
+              height="20"
+              style="display: inline-block; vertical-align: middle"
+            >
+              <path
+                fill="#00aeef"
+                d="M12,2L1,21H23M12,6L19.53,19H4.47M11,10V14H13V10M11,16V18H13V16"
+              />
+            </svg> </span>`
+
       const language = navigator.language
 
       if (language == 'es-ES') {
         btn.textContent = 'Continuar'
+        console.log(txt.textContent)
         txt.textContent =
           'Este contenido puede no ser apropiado para todas las audiencias.'
       }
+
+      txt.innerHTML = svg + txt.innerHTML
 
       btn.addEventListener('click', () => {
         video.style.display = 'block'
