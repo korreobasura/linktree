@@ -177,7 +177,18 @@
 
       btn.addEventListener('click', () => {
         video.style.display = 'block'
-        // video.requestFullscreen().catch(() => {})
+        if (screen?.orientation?.lock) {
+          screen.orientation
+            .lock('landscape')
+            .then(() => {
+              video.requestFullscreen().catch(() => {})
+            })
+            .catch(() => {
+              video.requestFullscreen().catch(() => {})
+            })
+        } else {
+          video.requestFullscreen().catch(() => {})
+        }
         video.play()
       })
     </script>
