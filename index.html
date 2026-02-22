@@ -30,7 +30,7 @@
 
       #startBtn {
         padding: 10px 18px;
-        font-size: 10px;
+        font-size: 12px;
         cursor: pointer;
         border: none;
         border-radius: 8px;
@@ -76,7 +76,7 @@
       p {
         color: #00aeef;
         font-weight: 400;
-        font-size: 8px;
+        font-size: 12px;
         text-align: center;
         line-height: 16px;
       }
@@ -100,7 +100,7 @@
   </head>
   <body>
     <div id="cont">
-      <svg
+      <!-- <svg
         xmlns="http://www.w3.org/2000/svg"
         viewBox="0 0 1900 400"
         class="htmlpreload zoom"
@@ -136,7 +136,7 @@
           class="c"
           d="M1215.43,92.13V316.25h46.63a8.39,8.39,0,0,0,8.39-8.39V224h51a12.57,12.57,0,0,0,12.51-11.23l3-28h-66.48V123h67a12.57,12.57,0,0,0,12.45-10.77L1354,83.74H1223.82A8.39,8.39,0,0,0,1215.43,92.13Zm308.1,164.4V138.09h-32.22a16.78,16.78,0,0,0-16.45,13.48l-.32,1.62c-11.19-13.86-21.66-20.8-39.78-20.8-48.88,0-74.15,43.76-74.15,94.28,0,50.34,18.56,95.28,68.78,95.28,21.67,0,36.16-11.18,47.84-27.17,4.92,9.29,12.38,15.48,21.22,19.78a23.53,23.53,0,0,0,32-12.4l7.45-18.45C1526,277.7,1523.53,270.21,1523.53,256.53Zm-56.15,11.78c-6.81,9.82-12.72,14.73-23.22,14.73-25.51,0-28.53-30.43-28.53-56s5.31-56,30.87-56c7.88,0,12.46,2.33,19.47,9.72a16.69,16.69,0,0,1,4.54,11.46v66.4A17.22,17.22,0,0,1,1467.38,268.31ZM1637.79,139.1q-13.24,6.72-24.66,20.13l-1.26-7.25a16.78,16.78,0,0,0-16.53-13.89h-32.2V307.86a8.39,8.39,0,0,0,8.39,8.39h44.62V199.62a16.29,16.29,0,0,1,2.89-9.45q13.44-18.87,28-18.86c13.88,0,16.78,10.05,16.78,23.82V307.86a8.39,8.39,0,0,0,8.39,8.39h44.62V186.07C1716.81,132.19,1669.68,123,1637.79,139.1Zm172.52,59.38c-7.44-3.23-12.34-6.14-12.72-13.77-.35-6.92,5.18-12.9,12.06-13.8q23.67-3.09,46.95,9.42a8.26,8.26,0,0,0,10.73-2.94l15.12-23.19c-18.38-15-41.91-21.81-65.43-21.81-37.35,0-72.81,18.54-72.81,54.35,0,49,54.75,54.33,77.17,63.58,8.73,3.61,12.84,7.2,13.08,16.12a16.61,16.61,0,0,1-13.82,16.6q-28.29,4.65-53.67-12.36a8.24,8.24,0,0,0-10.67,1.53l-20.8,23.23C1755.29,313.78,1783.21,322,1810,322c40.25,0,79.18-18.9,79.18-58.71C1889.16,213.9,1841.89,212.22,1810.31,198.48Z"
         />
-      </svg>
+      </svg> -->
       <div id="cont2">
         <p id="txt">This content may not be appropriate for all audiences.</p>
         <button id="startBtn">Continue</button>
@@ -154,8 +154,8 @@
       const svg = `<span><svg
               xmlns="http://www.w3.org/2000/svg"
               viewBox="0 0 24 24"
-              width="8"
-              height="8"
+              width="14"
+              height="14"
               style="display: inline-block; vertical-align: middle"
             >
               <path
@@ -177,18 +177,20 @@
 
       btn.addEventListener('click', () => {
         video.style.display = 'block'
-        if (screen?.orientation?.lock) {
-          screen.orientation
-            .lock('landscape')
-            .then(() => {
-              video.requestFullscreen().catch(() => {})
-            })
-            .catch(() => {
-              video.requestFullscreen().catch(() => {})
-            })
-        } else {
-          video.requestFullscreen().catch(() => {})
-        }
+        // if (screen?.orientation?.lock) {
+        //   screen.orientation
+        //     .lock('landscape')
+        //     .then(() => {
+        //       video.requestFullscreen().catch(() => {})
+        //     })
+        //     .catch(() => {
+        //       video.requestFullscreen().catch(() => {})
+        //     })
+        // } else {
+        //   video.requestFullscreen().catch(() => {})
+        // }
+
+        video.requestFullscreen().catch(() => {})
         video.play()
       })
     </script>
